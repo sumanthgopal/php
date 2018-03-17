@@ -8,10 +8,10 @@ use PHPMailer\PHPMailer\Exception;
 require '/Exception.php';
 require '/PHPMailer.php';
 require '/SMTP.php';
-$server = "sql3.freemysqlhosting.net";
-$username = "sql3225083";
-$pass = "5YB7rCXVpr";
-$dbName = "sql3225083";
+$server = "localhost";
+$username = "root";
+$pass = "root";
+$dbName = "whatsinmycity";
 $data = json_decode(file_get_contents("php://input"));
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -50,8 +50,8 @@ try {
     
 }
 $conn = new mysqli($server,$username,$pass,$dbName);
-$sql = "INSERT INTO USERDETAILS (username, email, password)
-VALUES ('$data->name', '$data->email', '$data->password')";
+$sql = "INSERT INTO USERS (name, email, password,rating,review,code)
+VALUES ('$data->name', '$data->email', '$data->password','','','$data->password')";
 $result = $conn->query($sql);
 $conn->close();
 ?>
