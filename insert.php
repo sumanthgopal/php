@@ -44,7 +44,7 @@ try {
     $mail->Subject = 'Welcome to What\s in my city';
     $mail->Body    = "<h2>Hello Beloved Customer!!</h2>
     <p>Welcome to What\'s in my City!!! You’ve been selected to receive this special offer from What\'s in my city team. As our brand new customer of our website, we reward you 
-     with a 10% off on any of the restaurents listed on our website. To redeem this offer, put the following promo code on our website: ".$data->code."</p>";
+     with a 10% off on any of the restaurents listed on our website. To redeem this offer, put the following promo code on our website: </p>";
     $mail->send();
 } catch (Exception $e) {
     
