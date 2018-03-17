@@ -51,7 +51,7 @@ try {
 }
 $conn = new mysqli($server,$username,$pass,$dbName);
 $sql = "INSERT INTO USERDETAILS (username, email, password)
-VALUES ('$data->username', '$data->email', '$data->password')";
+VALUES ('$data->name', '$data->email', '$data->password')";
 $result = $conn->query($sql);
 $conn->close();
 ?>
