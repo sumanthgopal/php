@@ -7,7 +7,7 @@ $username = "sql3225083";
 $pass = "5YB7rCXVpr";
 $dbName = "sql3225083";
 $conn = new mysqli($server,$username,$pass,$dbName);
-$sql = "SELECT * FROM userdetails";
+$sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
