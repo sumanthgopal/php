@@ -5,10 +5,10 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 
 
-$server = "localhost";
-$username = "root";
-$pass = "root";
-$dbName = "whatsinmycity";
+$server = "sql3.freemysqlhosting.net";
+$username = "sql3225083";
+$pass = "5YB7rCXVpr";
+$dbName = "sql3225083";
 $data = json_decode(file_get_contents("php://input"));
 
 
