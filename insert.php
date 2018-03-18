@@ -13,7 +13,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 
 $conn = new mysqli($server,$username,$pass,$dbName);
-$sql = "INSERT INTO USERS (name, email, password,rating,review,code)
+$sql = "INSERT INTO users (name, email, password,rating,review,code)
 VALUES ('$data->name', '$data->email', '$data->password','','','$data->password')";
 $result = $conn->query($sql);
 $conn->close();
