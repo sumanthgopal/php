@@ -2,10 +2,10 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
-$server = "sql3.freemysqlhosting.net";
-$username = "sql3225083";
-$pass = "5YB7rCXVpr";
-$dbName = "sql3225083";
+$server = "sql9.freemysqlhosting.net";
+$username = "sql9287264";
+$pass = "GTG2S75ZwC";
+$dbName = "sql9287264";
 $conn = new mysqli($server,$username,$pass,$dbName);
 $data = json_decode(file_get_contents("php://input"));
 $sql = "SELECT * FROM $data->searchValue WHERE upper(CITY) IN ('$data->city')";
